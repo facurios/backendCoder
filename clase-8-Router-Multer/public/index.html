@@ -1,0 +1,28 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios de Ingreso</title>
+    
+</head>
+<body>
+    <h1 id="mensaje"></h1>
+    <h2>Agregar Producto Nuevo</h2>
+    <form action="/api/productos" method="POST">
+        <br>Nombre: <input type="text" name="title">
+        <br>Precio: <input type="number" name="price">
+        <br>Imagen: <input type="text" name="thumbnail">
+        <button type="submit">Enviar</button>
+    </form>
+    <h2>Actualizar Producto</h2>
+    <form enctype="multipart/form-data" id="actualizar">
+        <br>Id: <input type="num" name="id">
+        <br>Nombre: <input type="text" name="title">
+        <br>Precio: <input type="number" name="price">
+        <br>Imagen: <input type="text" name="thumbnail">
+        <button type="submit">Enviar</button>
+    </form>
+    <script src="index.js"></script>
+</body>
+</html>
+
