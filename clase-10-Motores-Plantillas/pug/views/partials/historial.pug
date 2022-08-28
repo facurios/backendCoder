@@ -1,0 +1,20 @@
+div
+    h2(style='color:crimson;') Historial
+    br
+    if produc.length > 0
+        div(class="table-responsive")
+            table.table.table-dark
+                tr(style='color: yellow;')
+                    th Nombre
+                    th Precio
+                    th foto url
+                each producto in produc        
+                    tr
+                        td=producto.title
+                        td=producto.price
+                        td
+                            img(width="30" src=producto.thumbnail , alt="")
+    else 
+        h3(class="alert alert-warning")='No se encontraron productos'
+    form(action="/" method="get")
+        button(class="btn btn-success mt-3 mb-5") Volver

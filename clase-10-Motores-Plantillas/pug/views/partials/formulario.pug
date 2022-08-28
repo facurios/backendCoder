@@ -1,0 +1,20 @@
+div(class="jumbotron")
+    h1(style="color:blue;") Ingrese datos
+    br
+    form(action="/productos" method="post")
+        div(class="form-group")
+            label(for="nombre")
+                b Nombre
+            input(id="nombre" class="form-control" type="text" name="title")
+        .form-group
+            label(for='precio')
+                b Precio
+            input#precio.form-control(type='text' name='price')
+        .form-group
+            label(for='url')
+                b Foto url
+            input#url.form-control(type='text' name='thumbnail')
+        
+        button(class="btn btn-success mt-3") Enviar 
+    form(action="/productos" method="get")
+        button(class="btn btn-success mt-3 mb-5") Ir a historial 

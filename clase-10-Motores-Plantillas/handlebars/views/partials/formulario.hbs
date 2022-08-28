@@ -1,0 +1,27 @@
+<!-- Formulario -->
+<div class="jumbotron">
+    <h1 style="color:blue;">Ingrese datos</h1>
+    <br>
+    <form action="/productos" method="POST">
+        <div class="form-group">
+            <label for="nombre"><b>Nombre</b></label>
+            <input id="nombre" class="form-control" type="text" name="title" onchange="">
+        </div>
+    
+        <div class="form-group">
+            <label for="precio"><b>Precio</b></label>
+            <input id="precio" class="form-control" type="text" name="price">
+        </div>
+        <div class="form-group">
+            <label for="url"><b>Foto url</b></label>
+            <input id="url" class="form-control" type="text" name="thumbnail">
+        </div>
+        <button class="btn btn-success mt-3 mb-">Enviar</button>
+
+    </form>
+    <form action="/productos" method="GET">
+        <button class="btn btn-success mt-3 mb-5">Ir a historial</button>
+    </form>
+
+</div>
+<!-- Final Formulario -->
