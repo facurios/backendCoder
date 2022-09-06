@@ -1,6 +1,6 @@
 const Products = require('../models/products.js')
 
-// import __dirname from "../utils.js";
+
 
 let products = new Products(__dirname + "/fileSystem/products/products.txt");
 

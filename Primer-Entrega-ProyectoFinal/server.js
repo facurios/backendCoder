@@ -1,7 +1,7 @@
 const express = require('express');
 const prodRouter = require('./routes/productsRoute.js')
 const cartRouter = require('./routes/cartRoute')
-// import __dirname from './utils.js';
+
 
 const app = express();
 const PORT = process.env.PORT || 8080;

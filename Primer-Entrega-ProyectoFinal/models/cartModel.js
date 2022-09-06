@@ -8,7 +8,6 @@ module.exports = class Cart {
     getCart = async () => {
         try {
             if (fs.existsSync(this.nombreArchivo)) {
-                //console.log('existe')
                 let content = fs.readFileSync(this.nombreArchivo, 'utf-8');
                 return content;
             } else {

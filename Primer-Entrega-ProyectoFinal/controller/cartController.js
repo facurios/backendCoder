@@ -1,6 +1,5 @@
 
 const Cart = require('../models/cartModel.js')
-// import __dirname from '../utils.js';
 
 // //Inicializo el carro
 let cart = new Cart(__dirname + '/fileSystem/carts/carts.txt');
@@ -184,7 +183,6 @@ const deleteProduct = (req, res) => {
             description: 'Product id'
         })
     }
-    //else {
     if (cartId === -1) {
         res.status(404).send({
             message: 'Carro inexistente',
