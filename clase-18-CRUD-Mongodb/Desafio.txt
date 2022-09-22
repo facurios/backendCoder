@@ -1,0 +1,305 @@
+> use ecommerce
+
+already on db ecommerce
+----------------------------------------------
+
+> db.createCollection('productos')
+
+{ ok: 1 }
+---------------------------------------------
+
+> db.createCollection('mensajes')
+
+{ ok: 1 }
+------------------------------------------------
+
+> db.productos.insertMany([
+    {title: "coca-cola", price: 120, thumbnail: ""},
+    {title: "fanta", price: 580, thumbnail: ""},
+    {title: "pepsi", price: 900, thumbnail: ""},
+    {title: "carne", price: 1280, thumbnail: ""},
+    {title: "fideos", price: 1700, thumbnail: ""},
+    {title: "papa", price: 2300, thumbnail: ""},
+    {title: "tomate", price: 2860, thumbnail: ""},
+    {title: "vino", price: 3350, thumbnail: ""},
+    {title: "leche", price: 4320, thumbnail: ""},
+    {title: "azucar", price: 4990, thumbnail: ""}
+])
+
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("63224af110e1b58397077b46"),
+    '1': ObjectId("63224af110e1b58397077b47"),
+    '2': ObjectId("63224af110e1b58397077b48"),
+    '3': ObjectId("63224af110e1b58397077b49"),
+    '4': ObjectId("63224af110e1b58397077b4a"),
+    '5': ObjectId("63224af110e1b58397077b4b"),
+    '6': ObjectId("63224af110e1b58397077b4c"),
+    '7': ObjectId("63224af110e1b58397077b4d"),
+    '8': ObjectId("63224af110e1b58397077b4e"),
+    '9': ObjectId("63224af110e1b58397077b4f")
+  }
+}
+
+--------------------------------------------------
+
+> db.mensajes.insertMany([
+    {toto: "mensje 1"},
+    {pepe: "mensje 2"},
+    {tito: "mensje 3"},
+    {lola: "mensje 4"},
+    {manolo: "mensje 5"},
+    {pipi: "mensje 6"},
+    {dada: "mensje 7"},
+    {kiko: "mensje 8"},
+    {dona: "mensje 9"},
+    {pipo: "mensje 10"}
+])
+
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("63224b1310e1b58397077b50"),
+    '1': ObjectId("63224b1310e1b58397077b51"),
+    '2': ObjectId("63224b1310e1b58397077b52"),
+    '3': ObjectId("63224b1310e1b58397077b53"),
+    '4': ObjectId("63224b1310e1b58397077b54"),
+    '5': ObjectId("63224b1310e1b58397077b55"),
+    '6': ObjectId("63224b1310e1b58397077b56"),
+    '7': ObjectId("63224b1310e1b58397077b57"),
+    '8': ObjectId("63224b1310e1b58397077b58"),
+    '9': ObjectId("63224b1310e1b58397077b59")
+  }
+}
+-----------------------------------------
+
+> db.productos.find()
+
+[
+  {
+    _id: ObjectId("63224af110e1b58397077b46"),
+    title: 'coca-cola',
+    price: 120,
+    thumbnail: ''
+  },
+  {
+    _id: ObjectId("63224af110e1b58397077b47"),
+    title: 'fanta',
+    price: 580,
+    thumbnail: ''
+  },
+  {
+    _id: ObjectId("63224af110e1b58397077b48"),
+    title: 'pepsi',
+    price: 900,
+    thumbnail: ''
+  },
+  {
+    _id: ObjectId("63224af110e1b58397077b49"),
+    title: 'carne',
+    price: 1280,
+    thumbnail: ''
+  },
+  {
+    _id: ObjectId("63224af110e1b58397077b4a"),
+    title: 'fideos',
+    price: 1700,
+    thumbnail: ''
+  },
+  {
+    _id: ObjectId("63224af110e1b58397077b4b"),
+    title: 'papa',
+    price: 2300,
+    thumbnail: ''
+  },
+  {
+    _id: ObjectId("63224af110e1b58397077b4c"),
+    title: 'tomate',
+    price: 2860,
+    thumbnail: ''
+  },
+  {
+    _id: ObjectId("63224af110e1b58397077b4d"),
+    title: 'vino',
+    price: 3350,
+    thumbnail: ''
+  },
+  {
+    _id: ObjectId("63224af110e1b58397077b4e"),
+    title: 'leche',
+    price: 4320,
+    thumbnail: ''
+  },
+  {
+    _id: ObjectId("63224af110e1b58397077b4f"),
+    title: 'azucar',
+    price: 4990,
+    thumbnail: ''
+  }
+]
+------------------------------------------------------
+
+> db.mensajes.find()
+
+[
+  { _id: ObjectId("63224b1310e1b58397077b50"), toto: 'mensje 1' },
+  { _id: ObjectId("63224b1310e1b58397077b51"), pepe: 'mensje 2' },
+  { _id: ObjectId("63224b1310e1b58397077b52"), tito: 'mensje 3' },
+  { _id: ObjectId("63224b1310e1b58397077b53"), lola: 'mensje 4' },
+  { _id: ObjectId("63224b1310e1b58397077b54"), manolo: 'mensje 5' },
+  { _id: ObjectId("63224b1310e1b58397077b55"), pipi: 'mensje 6' },
+  { _id: ObjectId("63224b1310e1b58397077b56"), dada: 'mensje 7' },
+  { _id: ObjectId("63224b1310e1b58397077b57"), kiko: 'mensje 8' },
+  { _id: ObjectId("63224b1310e1b58397077b58"), dona: 'mensje 9' },
+  { _id: ObjectId("63224b1310e1b58397077b59"), pipo: 'mensje 10' }
+]
+---------------------------------------------------------------
+
+> db.productos.find().count()
+
+10
+---------------------------------------------------------------
+
+> db.mensajes.find().count()
+
+10
+
+----------------------------------------------------------------------------------
+
+
+> db.productos.insertOne({title: "agua", price: 2333, thumbnail: ""})
+
+{
+  acknowledged: true,
+  insertedId: ObjectId("63224b9910e1b58397077b5a")
+}
+--------------------------------------------------------------------------
+
+> db.productos.find({price:{$lte:1000}})
+
+[
+  {
+    _id: ObjectId("63224af110e1b58397077b46"),
+    title: 'coca-cola',
+    price: 120,
+    thumbnail: ''
+  },
+  {
+    _id: ObjectId("63224af110e1b58397077b47"),
+    title: 'fanta',
+    price: 580,
+    thumbnail: ''
+  },
+  {
+    _id: ObjectId("63224af110e1b58397077b48"),
+    title: 'pepsi',
+    price: 900,
+    thumbnail: ''
+  }
+]
+-------------------------------------------------------------
+
+> db.productos.find({price:{$gte:1000,$lte:3000}})
+
+[
+  {
+    _id: ObjectId("63224af110e1b58397077b49"),
+    title: 'carne',
+    price: 1280,
+    thumbnail: ''
+  },
+  {
+    _id: ObjectId("63224af110e1b58397077b4a"),
+    title: 'fideos',
+    price: 1700,
+    thumbnail: ''
+  },
+  {
+    _id: ObjectId("63224af110e1b58397077b4b"),
+    title: 'papa',
+    price: 2300,
+    thumbnail: ''
+  },
+  {
+    _id: ObjectId("63224af110e1b58397077b4c"),
+    title: 'tomate',
+    price: 2860,
+    thumbnail: ''
+  },
+  {
+    _id: ObjectId("63224b9910e1b58397077b5a"),
+    title: 'agua',
+    price: 2333,
+    thumbnail: ''
+  }
+]
+--------------------------------------------------------------
+
+> db.productos.find({price:{$gt:3000}})
+
+[
+  {
+    _id: ObjectId("63224af110e1b58397077b4d"),
+    title: 'vino',
+    price: 3350,
+    thumbnail: ''
+  },
+  {
+    _id: ObjectId("63224af110e1b58397077b4e"),
+    title: 'leche',
+    price: 4320,
+    thumbnail: ''
+  },
+  {
+    _id: ObjectId("63224af110e1b58397077b4f"),
+    title: 'azucar',
+    price: 4990,
+    thumbnail: ''
+  }
+]
+------------------------------------------------------------
+
+> db.productos.find({price: {$gt:0}} ,{title:1, "_id": 0}).sort({price:1}).limit(1).skip(2)
+
+[ { title: 'pepsi' } ]
+-------------------------------------------------------------
+
+> db.productos.updateMany({},{$set: {stock: 100}})
+
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 11,
+  modifiedCount: 11,
+  upsertedCount: 0
+}
+---------------------------------------------------------
+
+> db.productos.updateMany({price:{$gt:4000}},{$set: {stock: 0}})
+
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 2,
+  modifiedCount: 2,
+  upsertedCount: 0
+}
+------------------------------------------------------------
+
+> db.productos.deleteMany({price: {$lt: 1000}})
+
+{ acknowledged: true, deletedCount: 3 }
+
+-------------------------------------------------------------
+
+> db.createUser({user: "pepe", pwd: "asd456", roles: [{role: "read", db: "ecommerce"}]})
+
+> mongo -u pepe -p asd456
+
+> db.productos.insertOne({ title: "Articulo" })
+
+{
+  "errmsg" : "not authorized on blog to execute command"
+  "codeName" : "Unauthorized"
+}
