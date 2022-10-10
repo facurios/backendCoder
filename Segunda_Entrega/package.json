@@ -1,0 +1,22 @@
+{
+  "type": "module",
+  "name": "entregable",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "nodemon src/main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "firebase-admin": "^9.12.0",
+    "knex": "^0.95.15",
+    "mongodb": "^3.7.3",
+    "mongoose": "^5.13.15",
+    "mysql": "^2.18.1",
+    "sqlite3": "^5.1.2"
+  }
+}

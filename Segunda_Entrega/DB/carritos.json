@@ -1,0 +1,16 @@
+[
+  {
+    "title": "asd",
+    "productos": [
+      {
+        "title": "otot",
+        "price": 111,
+        "thumbnail": "toto.com",
+        "date": "23/09/2022, 01:01:08",
+        "id": 1
+      }
+    ],
+    "date": "23/09/2022, 01:04:26",
+    "id": 1
+  }  
+]
