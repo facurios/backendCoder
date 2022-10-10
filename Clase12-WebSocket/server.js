@@ -1,8 +1,8 @@
 /* ---------------------- Modulos ----------------------*/
 const express = require('express');
 const morgan = require('morgan');
-const Productos = require('./class/productos.js');
-const Chats = require('./class/chats.js');
+const Productos = require('./constructor/productos.js');
+const Chats = require('./constructor/chats.js');
 
 /* ------------------- Instancia Server -------------------*/
 const app = express();
