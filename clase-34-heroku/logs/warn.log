@@ -1,0 +1,10 @@
+[2022-11-14T16:24:28.338] [WARN] default - Ruta: /infoddd No permitida
+[2022-11-14T16:24:28.420] [WARN] default - Ruta: /favicon.ico No permitida
+[2022-11-14T16:24:40.258] [ERROR] default - esto es un error
+[2022-11-14T16:24:42.531] [WARN] default - Ruta: /favicon.ico No permitida
+[2022-11-14T16:34:14.667] [WARN] default - Ruta: /favicon.ico No permitida
+[2022-11-14T16:44:56.806] [WARN] default - Ruta: /favicon.ico No permitida
+[2022-11-22T17:37:20.621] [ERROR] default - Ruta /login Metodo Get
+[2022-11-22T17:48:16.325] [ERROR] default -  Ruta /registro Metodo Post
+[2022-11-22T17:49:12.698] [ERROR] default -  Ruta /registro Metodo Post
+[2022-11-22T18:21:47.834] [WARN] default - Ruta: /favicon.ico No permitida
