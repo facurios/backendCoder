@@ -1,0 +1,23 @@
+<nav class="navbar border-bottom shadow navbar-expand-lg">
+    <div class="container-fluid">
+        <a class="navbar-brand text-dark" href="/productos">
+            <img src="../../img/logo.png" alt="Cool Drink" width="80" height="80" class="align-text"> 
+            MI TIENDITA  
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>    
+        <li class="nav-item dropdown d-flex">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <%= email %>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a class="dropdown-item" href="/carrito">Carrito</a></li>
+              <li><a class="dropdown-item" href="/chat">Chat</a></li>
+              <li><a class="dropdown-item" href="/usuario">Datos</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/logout">Logout</a></li>
+            </ul>
+          </li>
+    </div>    
+</nav>

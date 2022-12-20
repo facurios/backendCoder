@@ -1,0 +1,10 @@
+<div class="col">
+    <div class="card shadow">
+      <img src="<%= products.pictureUrl %>" width="100" height="200" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><%= products.title %></h5>
+        <p class="card-text">$<%= products.price %></p>
+        <a class="btn btn-dark" href="/productos/<%= products._id %>">Ver Producto</a>
+      </div>
+    </div>
+</div>
