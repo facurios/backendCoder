@@ -1,0 +1,43 @@
+CONSULTAS DESDE GRAPHQL
+
+CONSULTAR TODOS LOS PRODUCTOS
+query{
+  getProductos{title, price, thumbnail, id}
+}
+
+CONSULTA PRODUCTOS POR ID
+query{
+  getProducto(id:"d1ce8d804638a8e5fe4e"){title, price}
+}
+
+CREACION DE NUEVO PRODUCTOS
+mutation{
+  crearProducto(datos: {
+    title:"cualquiera",
+    price: 123,
+    thumbnail:"dsad"
+  }){
+    id
+  }
+}
+
+ACTUALIZACION DE PRODUCTOS
+mutation{
+  actualizarProducto(id:"37ca247054991d0875af", datos: {
+    title:"otro cualquiera",
+    price: 689,
+    thumbnail:"dsad"
+  }){
+    price,
+    title
+  }
+}
+
+ELIMINAR PRODUCTOS
+mutation{
+  eliminarProducto(id:"37ca247054991d0875af"){
+    price,
+    title
+  }
+}
+
